@@ -1,0 +1,55 @@
+                                                                  1
+                                                                  2*3
+                                                                  4*5*6
+                                                                  7*8*9*10
+                                                                  7*8*9*10
+                                                                  4*5*6
+                                                                  2*3
+                                                                  1
+
+
+
+
+
+#include <algorithm>
+#include <iostream>
+
+#include <vector>
+
+using namespace std;
+int main(){
+    int n;
+    
+    cin>>n;
+    //upper half
+    int counter =1;
+    for(int r=0;r<n;r++)
+    {
+        
+        for(int c =0 ; c<r+1;c++)
+        {
+            if(c!=r)
+                cout<<(counter+c)<<"*";
+            else
+                cout<<(counter+c);
+        }
+        counter+=(r+1);
+        cout<<endl;
+    }
+    //lower half
+    int reverse_counter = 7;
+    for(int r=0;r<n;r++)
+    {
+        int c;
+        for(c =0 ; c<n-r;c++)
+        {
+            if(c!=n-r-1)
+                cout<<(reverse_counter+c)<<"*";
+            else
+                cout<<(reverse_counter+c);
+        }
+        reverse_counter-=(c-1);
+        cout<<endl;
+    }
+
+}
