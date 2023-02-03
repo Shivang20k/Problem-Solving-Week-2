@@ -1,0 +1,37 @@
+                                                          A
+                                                          AB B
+                                                          ABC CB
+                                                          ABCD DCB
+
+
+#include <algorithm>
+#include <iostream>
+
+#include <vector>
+
+using namespace std;
+int main(){
+    int n;
+    
+    cin>>n;
+    //upper half
+    for(int r=0;r<n;r++)
+    {
+        //left half
+        for(int c =0 ; c<r+1;c++)
+        {
+            char  ch;
+            ch = 'A' + c;
+            cout<<ch;
+        }
+        //right half    
+        for(int c=r; c>=1;c--)
+        {
+            char ch;
+            ch = 'A' + c;
+            cout<<ch;
+        }
+        cout<<endl;
+    }
+
+}
