@@ -1,0 +1,52 @@
+                                                                XXXXX XXXXX
+                                                                XXXX   XXXX
+                                                                XXX     XXX
+                                                                XX       XX
+                                                                X         X
+                                                                X         X
+                                                                XX       XX
+                                                                XXX     XXX
+                                                                XXXX   XXXX
+                                                                XXXXX XXXXX
+
+
+
+#include <algorithm>
+#include <iostream>
+
+#include <vector>
+
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    //upper half
+    for(int r=0;r<n;r++)
+    {
+        // stars
+        for(int c =0 ; c<n-r ; c++) //r1
+            cout<< "X";
+        
+        for(int c=0; c<(2*r+1);c++)//r2 as full space pyramid in same row loop
+           cout<< " ";                 // thus making formula for only stars & ignoring spaces formula
+        
+        for(int c =0 ; c<n-r ; c++) //r3 mirrored-inverted half pyramid in same row loop so ignoring apces formula
+            cout<< "X";  //thus making formula only for stars which is somehow same as r4  
+    cout<<endl;
+    }
+    //lower half
+    for(int r=0;r<n;r++)
+    {
+        // stars
+        for(int c =0 ; c<r+1 ; c++) //r4
+            cout<< "X";
+        
+        for(int c=0; c<(2*n-1-2*r);c++)//r5 as inverted full space pyramid in same row loop
+           cout<< " ";                 // thus making formula for only stars & ignoring spaces formula
+        
+        for(int c =0 ; c<r+1 ; c++) //r6 mirrored half pyramid in same row loop so ignoring apces formula
+            cout<< "X";  //thus making formula only for stars which is somehow same as r4  
+    cout<<endl;
+    }
+    
+}
