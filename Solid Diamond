@@ -1,0 +1,48 @@
+                                                                X  
+                                                               X  X  
+                                                              X  X  X  
+                                                             X  X  X  X  
+                                                            X  X  X  X  X  
+                                                            X  X  X  X  X  
+                                                             X  X  X  X  
+                                                              X  X  X  
+                                                               X  X  
+                                                                X  (broke in to lower and upper half)
+
+#include <algorithm>
+#include <iostream>
+
+#include <vector>
+
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    
+    //upper half
+    for(int r=0;r<n;r++)
+    {
+        //space
+        for(int c = 0; c<n-r-1; c++)
+                cout<< " ";
+        // stars
+        for(int c =0 ; c<r+1 ; c++) // no. of stars not characters
+            cout<< "X  ";
+            
+    cout<<endl;
+    }
+    
+    //lower half
+    for(int r=0;r<n;r++)
+    {
+        //space
+        for(int c = 0; c<r; c++)
+                cout<< " ";
+        // stars
+        for(int c =0 ; c<n-r ; c++) // no. of stars not characters
+            cout<< "X  ";
+            
+    cout<<endl;
+    }
+    
+}
