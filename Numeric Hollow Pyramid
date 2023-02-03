@@ -1,0 +1,44 @@
+                                                       1 
+                                                      1  3 
+                                                     1    5 
+                                                    1      7 
+                                                   1 2  3 4  5 
+
+
+#include <algorithm>
+#include <iostream>
+
+#include <vector>
+
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    for(int r=0;r<n;r++)
+    {
+        //space
+        for(int c = 0; c<n-r; c++)
+        {
+            cout<< " ";
+        }
+        
+        // stars
+        //1st half
+        if(r==n-1)
+        {
+            for(int c =0; c<r+1; c++)
+            cout <<c+1<<" ";
+        }
+        else
+        {
+            for(int c =0 ; c<2*r+1 ; c++)// no. of characters not stars 
+            {
+                if(c==0 || c==2*r) 
+                cout<< c+1<<" ";
+                else
+                cout<<" ";
+            }
+        }
+        cout<<endl;
+    }
+}
