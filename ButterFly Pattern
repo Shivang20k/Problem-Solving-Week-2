@@ -1,0 +1,50 @@
+                                                    X           X
+                                                    XX         XX
+                                                    XXX       XXX
+                                                    XXXX     XXXX
+                                                    XXXXX   XXXXX
+                                                    XXXXXX XXXXXX
+                                                    XXXXXX XXXXXX
+                                                    XXXXX   XXXXX
+                                                    XXXX     XXXX
+                                                    XXX       XXX
+                                                    XX         XX
+                                                    X           X
+#include <algorithm>
+#include <iostream>
+
+#include <vector>
+
+using namespace std;
+int main(){
+    int n;
+    cin>>n;    
+    //upper half
+    for(int r=0;r<n;r++){  
+        for(int c=0; c<r+1;c++) //r1
+        {  cout<<"X"; 
+        }
+        for(int c=0; c<2*n-2*r-1;c++) //r2
+        {  cout<<" "; 
+        }
+        for(int c=0; c<r+1;c++) //r3
+        {  cout<<"X"; 
+        }
+    
+    cout<<endl;
+    } 
+    //lower half
+    for(int r=0;r<n;r++){  
+        for(int c=0; c<n-r;c++) //r1
+        {  cout<<"X"; 
+        }
+        for(int c=0; c<2*r+1;c++) //r2
+        {  cout<<" "; 
+        }
+        for(int c=0; c<n-r;c++) //r3
+        {  cout<<"X"; 
+        }
+    
+    cout<<endl;
+    } 
+}
