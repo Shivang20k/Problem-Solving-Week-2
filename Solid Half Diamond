@@ -1,0 +1,40 @@
+                                                        X
+                                                        XX
+                                                        XXX
+                                                        XXXX
+                                                        XXXXX
+                                                        XXXX
+                                                        XXX
+                                                        XX
+                                                        X
+                                                        
+                                    
+#include <iostream>
+
+#include <vector>
+
+using namespace std;
+int main(){
+    int n;
+    cin>>n;    
+    for(int r=0;r<n;r++){  
+        for(int c=0; c<r+1;c++) //r1
+        {
+            cout<<"X";
+        }
+    cout<<endl;
+    }
+    for(int r=1;r<n;r++){  //r2  // sipping 1st row as on 1st row we had 5 stars but we want from next ow i.e. 4 stars
+        
+        for(int c=0;c<n+1-r;c++) 
+            {
+                if(c==n-r)
+                  cout<<"";
+                else
+                  cout<<"X";
+            }
+         
+    cout<<endl;        
+    }
+   
+}
