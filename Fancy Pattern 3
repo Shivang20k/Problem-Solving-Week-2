@@ -1,0 +1,36 @@
+                                                        XXXXXXXX1XXXXXXXX
+                                                        XXXXXXX2X2XXXXXXX
+                                                        XXXXXX3X3X3XXXXXX
+                                                        XXXXX4X4X4X4XXXXX
+                                                        XXXX5X5X5X5X5XXXX
+
+
+
+#include <algorithm>
+#include <iostream>
+
+#include <vector>
+
+using namespace std;
+int main(){
+    int n;
+    cin>>n;    
+    for(int r=0;r<n;r++){  
+        for(int c=0; c<n+3-r;c++)//r1
+        {
+            cout<<"X";
+        }
+        for(int c=0;c<2*r+1;c++)//r2
+        {
+            if(c%2==0)
+              cout<<r+1;
+            else
+              cout<<"X";
+        }
+        for(int c=0; c<n+3-r;c++)//r3
+        {
+            cout<<"X";
+        }
+    cout<<endl;
+    }
+}
