@@ -1,0 +1,33 @@
+                                                        12345
+                                                        2  5
+                                                        3 5
+                                                        45
+                                                        5
+#include <algorithm>
+#include <iostream>
+
+#include <vector>
+
+using namespace std;
+int main(){
+    int n;
+    cin>>n;    
+    for(int r=0;r<n;r++){  
+        if(r!=0)
+        {
+            for(int c=0;c<n-r;c++)
+            {
+            if(c==0 || c==n-r-1)  
+                cout<<c+1+r;
+            else
+                cout<<" "; 
+            }
+        }
+        else
+        {
+            for(int c=0;c<n-r;c++){
+              cout<<c+1;}
+        }
+    cout<<endl;
+    }
+}
