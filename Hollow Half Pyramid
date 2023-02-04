@@ -1,0 +1,35 @@
+                                                            XXXXX
+                                                            X   X 
+                                                            X  X 
+                                                            X X 
+                                                            X 
+                                                            
+#include <algorithm>
+#include <iostream>
+
+#include <vector>
+
+using namespace std;
+int main(){
+    int n;
+    cin>>n;    
+    for(int r=0;r<n;r++){  
+    if(r!=0){
+    //1st half
+     for(int c =0 ; c<n-r ; c++)
+     { 
+          if(c==0 ||c==(n-r-1))
+           cout<< "X ";
+           else
+           cout<<" ";
+     }
+    }
+    else{
+        for(int c =0 ; c<n-r ; c++)
+     { 
+           cout<< "X";
+     }
+    }
+     cout<<endl;
+    }
+}
