@@ -1,0 +1,150 @@
+1] Area of Circle 
+
+
+#include <algorithm>
+#include <iostream>
+#include <vector>
+using namespace std;
+
+double area(float);
+
+int main(){
+    float a;
+    cin>>a;
+    cout<<area(a);
+    return 0;
+}
+
+double area(float r)
+{
+    
+   return(3.14 * r *r);
+}
+-----------------------------------------------------------------------------------------------------------------------
+
+2] Even or Odd number, WIth % oprtr as it is heavy operator so avoiding it.
+
+// using Bitwise AND operator
+#include <iostream>
+using namespace std;
+ 
+// Returns true if n is even, else odd
+bool isEven(int n)
+{
+    // n&1 is 1, then odd, else even
+    return (!(n & 1));
+}
+ 
+// Driver code
+int main()
+{
+    int n = 101;
+    isEven(n) ? cout << "Even" : cout << "Odd";
+    return 0;
+}
+-----------------------------------------------------------------------------------------------------------------------
+
+3] Factorial {but after 20 code broke}
+
+#include <algorithm>
+#include <iostream>
+#include <vector>
+using namespace std;
+
+long long fact(int);
+
+int main(){
+    int a;
+    cin>>a;
+    cout<<fact(a);
+    return 0;
+}
+
+long long fact(int num)
+{
+   long long product; 
+   for(int i=1 ; i<=num ; i++)
+    product*=i;
+   return product;
+}
+
+----------------------------------------------------------------------------------------------------------------------
+
+4] Check a Number prime 
+
+// A school method based C++ program to
+// check if a number is prime
+#include <bits/stdc++.h>
+using namespace std;
+
+// function check whether a number
+// is prime or not
+bool isPrime(int n)
+{
+	// Check if n=1 or n=0
+	if (n <= 1)
+		return false;
+	// Check if n=2 or n=3
+	if (n == 2 || n == 3)
+		return true;
+	// Check whether n is divisible by 2 or 3
+	if (n % 2 == 0 || n % 3 == 0)
+		return false;
+	// Check from 5 to square root of n
+	// Iterate i by (i+6)
+	for (int i = 5; i <= sqrt(n); i = i + 6)
+		if (n % i == 0 || n % (i + 2) == 0)
+			return false;
+
+	return true;
+}
+
+// Driver Code
+int main()
+{
+	isPrime(11) ? cout << "PRIME" : cout << "NOT PRIME";
+	return 0;
+}
+
+--------------------------------------------------------------------------------------------------------
+
+5] Print Prime numbers till N
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+// function check whether a number
+// is prime or not
+bool isPrime(int n)
+{
+	// Check if n=1 or n=0
+	if (n <= 1)
+		return false;
+	// Check if n=2 or n=3
+	if (n == 2 || n == 3)
+		return true;
+	// Check whether n is divisible by 2 or 3
+	if (n % 2 == 0 || n % 3 == 0)
+		return false;
+	// Check from 5 to square root of n
+	// Iterate i by (i+6)
+	for (int i = 5; i <= sqrt(n); i = i + 6)
+		if (n % i == 0 || n % (i + 2) == 0)
+			return false;
+
+	return true;
+}
+
+// Driver Code
+int main()
+{
+    int num;
+    cin>>num;
+    for( int i=2; i<=num; i++)
+    {
+	    isPrime(i) ? cout << i : cout << ", " ;
+    }
+	return 0;
+}
+-----------------------------------------------------------------------------------------------
